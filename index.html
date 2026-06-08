@@ -1,0 +1,71 @@
+<!--
+    Name: Preston Wilson
+    Email: preston_wilson@student.uml.edu
+    Assignment: GUI Programming HW3
+    Description: This page allows someone to enter four numbers and then uses JavaScript
+                 to dynamically create a multiplication table from those values.
+                 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HW3 Dynamic Multiplication Table</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Dynamic Multiplication Table</h1>
+            <p>Enter the column and row ranges below to build a table.</p>
+        </header>
+
+        <main>
+            <section id="form-area">
+                <h2>Please enter the table ranges</h2>
+
+                <form id="table-form" novalidate>
+                    <div class="form-row">
+                        <label for="min-column">Minimum Column Value</label>
+                        <input type="text" id="min-column" name="min-column" value="1">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="max-column">Maximum Column Value</label>
+                        <input type="text" id="max-column" name="max-column" value="5">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="min-row">Minimum Row Value</label>
+                        <input type="text" id="min-row" name="min-row" value="5">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="max-row">Maximum Row Value</label>
+                        <input type="text" id="max-row" name="max-row" value="8">
+                    </div>
+
+                    <input type="submit" value="Generate Table">
+                </form>
+
+                <div id="message" aria-live="polite"></div>
+            </section>
+
+            <section id="table-area">
+                <h2>Generated Table</h2>
+                <p id="range-summary">The table will appear here after the form is submitted.</p>
+                <div id="table-container"></div>
+            </section>
+        </main>
+
+        <footer>
+            Copyright &copy; 2026 Preston Wilson
+            <br>
+            <a href="mailto:preston_wilson@student.uml.edu">preston_wilson@student.uml.edu</a>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
