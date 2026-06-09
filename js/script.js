@@ -4,7 +4,7 @@
     Assignment: GUI Programming HW3
     Description: This file reads the four form values, validates them, and then
                  builds a multiplication table completely with JavaScript.
-                 
+
 */
 
 const MIN_ALLOWED = -50;
@@ -16,13 +16,13 @@ const message = document.getElementById("message");
 const tableContainer = document.getElementById("table-container");
 const rangeSummary = document.getElementById("range-summary");
 
-// This listener lets JavaScript handle the form instead of reloading the page.
+//This listener lets JavaScript handle the form instead of reloading the page.
 form.addEventListener("submit", function(event) {
     event.preventDefault();
     makeTableFromForm();
 });
 
-// A small default table is created when the page first loads.
+//A small default table is created when the page first loads
 makeTableFromForm();
 
 function makeTableFromForm() {
@@ -33,7 +33,7 @@ function makeTableFromForm() {
     const minRow = getIntegerValue("min-row", "Minimum Row Value");
     const maxRow = getIntegerValue("max-row", "Maximum Row Value");
 
-    // Stop if any field is empty or not an integer.
+    //This prevents any unexpected integer from working
     if (!minColumn.valid || !maxColumn.valid || !minRow.valid || !maxRow.valid) {
         return;
     }
@@ -64,7 +64,7 @@ function getIntegerValue(id, label) {
         return { valid: false, value: 0 };
     }
 
-    // This regular expression allows whole numbers like -3, 0, and 25.
+    // This expression allows whole numbers/integers
     if (!/^-?\d+$/.test(textValue)) {
         showMessage(label + " must be a whole number.", "error");
         return { valid: false, value: 0 };
